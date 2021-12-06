@@ -16,7 +16,8 @@ public class Conversor {
             {"_V","_IV","M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
     public static String converterParaNumeroRomano(int numeroConvertir) {
-        StringBuilder resultado = new StringBuilder();
+        if(numeroConvertir > 0) {
+            StringBuilder resultado = new StringBuilder();
             for (int i = 0; i < DECIMAIS.length; i++) {
                 int parteInteira = numeroConvertir / DECIMAIS[i];
                 numeroConvertir -= DECIMAIS[i] * parteInteira;
@@ -24,5 +25,7 @@ public class Conversor {
             }
             return resultado.toString();
         }
+        throw new RuntimeException("Não é possivel convertir números negativos");
+    }
 
     }
