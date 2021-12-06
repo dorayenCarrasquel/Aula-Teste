@@ -28,4 +28,6 @@ public class CalculadoraTest {
 
         Assert.assertEquals(-6, resultado);
     }
+
+    //Criem Teste para os metodos subtrair, dividir e multiplicar
 }
